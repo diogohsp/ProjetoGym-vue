@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 
 import Header from './components/Header.vue'
+import InputExercise from './components/inputExercise.vue'
 import ListExercise from './components/ListExercise.vue'
 import Footer from './components/Footer.vue'
 
@@ -9,10 +10,11 @@ import Footer from './components/Footer.vue'
 
 <template>
   <div class="bg-gradient-to-br from-cor1bg to bg-cor2bg">
-    <div class="flex flex-col justify-center items-ceter h-screen w-full">
+    <div class="flex flex-col justify-center items-center h-screen w-full">
 
     <Header class="absolute top-0"/>
-    <ListExercise class="mt-6"/>
+    <InputExercise/>
+    <ListExercise class="mt-6" :exercise="exercise"/>
     <Footer class="absolute bottom-0"/>
   
     </div>
