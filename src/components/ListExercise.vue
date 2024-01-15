@@ -1,29 +1,16 @@
 <script setup>
+import { ref } from 'vue'
 import Exercise from './Exercise.vue'
 
-</script>
+const serieAtual = ref(1)
+const list = ref([])
 
+const props = defineProps(['exercise'])
 
-<script>
-
-export default{
-    props: ['exercise'],
-    data(){
-        return{
-            serieAtual: 1,
-            list: [
-                
-            ],
-        }
-    },
-
-    methods: {
-        add(){
-            if(this.list.length < 6){
-                this.list.push({serie: this.serieAtual})
-                this.serieAtual++
-            }
-        }
+function add(){
+    if(list.value.length < 6){
+        list.value.push({serie: serieAtual.value})
+        serieAtual.value++
     }
 }
 </script>

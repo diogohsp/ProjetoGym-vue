@@ -13,7 +13,7 @@ import Footer from './components/Footer.vue'
     <div class="flex flex-col justify-center items-center h-screen w-full">
 
     <Header class="absolute top-0"/>
-    <InputExercise/>
+    <InputExercise />
     <ListExercise class="mt-6" :exercise="exercise"/>
     <Footer class="absolute bottom-0"/>
   
