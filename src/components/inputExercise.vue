@@ -1,7 +1,7 @@
 <script setup>
-    sendTitle() {
-        $emit('sendTitle', texto)
-    }
+    // sendTitle() {
+    //     $emit('sendTitle', texto)
+    // }
 </script>
 
 <template>
