@@ -5,7 +5,7 @@ import Exercise from './Exercise.vue'
 const serieAtual = ref(1)
 const list = ref([])
 
-const props = defineProps(['exercise'])
+const props = defineProps(['exercise','title'])
 
 function add(){
     if(list.value.length < 6){
@@ -17,7 +17,7 @@ function add(){
 
 <template>
     <div class="w-[25vw] h-[32vw] bg-white rounded-[35px] ml-[2vw] shadow-lg shadow-slate-900 flex flex-col items-center">
-        <h1 class="text-[2.5vw] font-poppins">{{ exercise }}</h1>
+        <h1 class="text-[2.5vw] font-poppins">{{ title }}</h1>
         <button @click="add" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mb-[1vw]">
             Adicionar
         </button>

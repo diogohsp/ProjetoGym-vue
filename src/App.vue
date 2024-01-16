@@ -1,10 +1,17 @@
 <script setup>
+import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 
 import Header from './components/Header.vue'
 import InputExercise from './components/inputExercise.vue'
 import ListExercise from './components/ListExercise.vue'
 import Footer from './components/Footer.vue'
+
+const valueReceive = ref('')
+
+function receiveValueTitle(value){
+    valueReceive.value = value
+}
 
 </script>
 
@@ -13,8 +20,8 @@ import Footer from './components/Footer.vue'
     <div class="flex flex-col justify-center items-center h-screen w-full">
 
     <Header class="absolute top-0"/>
-    <InputExercise />
-    <ListExercise class="mt-6" :exercise="exercise"/>
+    <InputExercise  @sendTitle="receiveValueTitle" />
+    <ListExercise class="mt-6" :title="valueReceive" :exercise="exercise"/>
     <Footer class="absolute bottom-0"/>
   
     </div>
